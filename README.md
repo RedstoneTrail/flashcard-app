@@ -9,12 +9,12 @@ r to go to a ~random card (lower confidence rated cards will appear more frequen
 / to search (wip)
 
 flashcards are in a database passed as a command line parameter:
-`
+```
 ./flashcard-app flashcards.db
-`
+```
 
 the database must match this scheme:
-`
+```
 flashcard
     flashcardid
     term
@@ -29,21 +29,21 @@ flashcardset
 cardinset
     flashcardid
     setid
-`
+```
 
 compile flashcards to a database with flashcardc:
-`
+```
 ./flashcardc flashcards.toml
-`
+```
 
 flashcards.toml will have the following format:
-`toml
+```toml
 [[cards]]
 term = "Term"
 definition = "Definition"
 sets = [ "Subject1/Topic1", "Subject2/Topic1" ]
 \# optional
 confidence = 3
-`
+```
 
 examples will appear at some point for each file and my flashcards will be made on a new repo (also at some point, ill write it here)
