@@ -42,7 +42,7 @@ flashcards.toml will have the following format:
 term = "Term"
 definition = "Definition"
 sets = [ "Subject1/Topic1", "Subject2/Topic1" ]
-\# optional
+# optional
 confidence = 3
 ```
 
