@@ -33,19 +33,17 @@ cardinset
 
 compile flashcards to a database with flashcardc:
 '''
-./flashcardc -f flashcards.txt -s sets.txt -r relations.txt
+./flashcardc flashcards.toml
 '''
 
-flashcards.txt has the following format:
-    the line number is the cardid + 1 (database is 0-indexed, line numbers are 1-indexed)
-    the term and definition for a card are on the same line, term first, separated by 3 '$' symbols with spaces either side ( $$$ )
-
-sets.txt has the following format:
-    the line number is the setid + 1 (database is 0-indexed, line numbers are 1-indexed)
-    the subject and topic for a card are on the same line, subject first, separated by 3 '$' symbols with spaces either side ( $$$ )
-    for a subject or topic-agnostic card, you can leave the section blank
-
-relations.txt has the following format:
-    the flashcardid and setid for a card are on the same line, flashcardid first, separated by 3 '$' symbols with spaces either side ( $$$ )
+flashcards.toml will have the following format:
+'''toml
+[[cards]]
+term = "Term"
+definition = "Definition"
+sets = [ "Subject1/Topic1", "Subject2/Topic1" ]
+\# optional
+confidence = 3
+'''
 
 examples will appear at some point for each file and my flashcards will be made on a new repo (also at some point, ill write it here)
